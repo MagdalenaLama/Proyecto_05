@@ -7,7 +7,7 @@ export const RouterApp = () => {
     <>
       <Routes>
         <Route index element={<HomePage />} />
-        <Route path="/search" element={SearchPage} />
+        <Route path="/search" element={<SearchPage />} />
       </Routes>
     </>
   );
