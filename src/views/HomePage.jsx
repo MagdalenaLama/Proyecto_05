@@ -8,7 +8,7 @@ export const HomePage = () => {
     <>
       <Header title={"Bienvenidos al buscador de libros"} />
       <section
-        className="container h-screen bg-cover bg-center"
+        className="w-full h-screen bg-cover flex-1 bg-center"
         style={{ backgroundImage: `url(${image})` }}
       >
         <div className="flex justify-center items-center h-full">

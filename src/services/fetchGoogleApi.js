@@ -10,7 +10,7 @@ export const fetchGoogleApi = async (query) => {
     if (response.status !== 200) {
       throw new Error("Ha ucurrido en error");
     } else {
-      const info = response.data;
+      const info = response.data.items;
       return info;
     }
   } catch (error) {
