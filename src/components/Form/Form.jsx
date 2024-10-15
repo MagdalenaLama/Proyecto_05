@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useGoogleApi } from "../../Hooks/useGoogleApi";
 import { BooksGrid } from "../BooksGrid/BooksGrid";
+import { ErrorBoundary } from "react-error-boundary";
+import { ErrorFallBack } from "../ErrorFallBack/ErrorFallBack";
 
 export const Form = () => {
   const [params, setParams] = useState("");
@@ -67,7 +69,14 @@ export const Form = () => {
       </form>
       {loading && <h2>Cargando...</h2>}
       {error && <h2>Error para encontrar el resultado</h2>}
-      {submit && <BooksGrid data={data} />}
+      {submit && (
+        <ErrorBoundary
+          FallbackComponent={ErrorFallBack}
+          onReset={() => window.location.reload}
+        >
+          <BooksGrid data={data} />
+        </ErrorBoundary>
+      )}
     </>
   );
 };

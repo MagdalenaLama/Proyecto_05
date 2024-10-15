@@ -10,7 +10,7 @@ export const BooksGrid = ({ data }) => {
             <BookCard key={book.id} title={book} />
           ))}
       </div>
-      );
+      ;
     </>
   );
 };
