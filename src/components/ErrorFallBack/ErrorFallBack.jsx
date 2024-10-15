@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export const ErrorFallBack = ({ error, resetErrorBoundary }) => {
+export const ErrorFallBack = () => {
   return (
     <>
       <div role="alert">

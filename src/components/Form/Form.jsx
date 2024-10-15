@@ -18,7 +18,6 @@ export const Form = () => {
     e.preventDefault();
     setParams("");
     setSubmit(true);
-    console.log(data);
   };
 
   return (
@@ -70,10 +69,7 @@ export const Form = () => {
       {loading && <h2>Cargando...</h2>}
       {error && <h2>Error para encontrar el resultado</h2>}
       {submit && (
-        <ErrorBoundary
-          FallbackComponent={ErrorFallBack}
-          onReset={() => window.location.reload}
-        >
+        <ErrorBoundary FallbackComponent={ErrorFallBack}>
           <BooksGrid data={data} />
         </ErrorBoundary>
       )}
