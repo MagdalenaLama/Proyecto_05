@@ -66,7 +66,7 @@ export const Form = () => {
           </button>
         </div>
       </form>
-      {loading && <h2>Cargando...</h2>}
+      {loading && submit && <h2>Cargando...</h2>}
       {error && <h2>Error para encontrar el resultado</h2>}
       {submit && (
         <ErrorBoundary FallbackComponent={ErrorFallBack}>

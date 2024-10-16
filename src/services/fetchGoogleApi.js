@@ -17,11 +17,3 @@ export const fetchGoogleApi = async (query) => {
     console.error(error.message);
   }
 };
-
-// const useFetch = async () => {
-//   const datos = await fetchGoogleApi("Paula de Isabel Allende");
-//   console.log(datos);
-//   return datos;
-// };
-
-// useFetch();
